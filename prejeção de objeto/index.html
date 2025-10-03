@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Skybox - THREE.js</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+    .sketchfab-embed-wrapper { 
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 60%;
+      z-index: 10; /* Certifique-se de que está acima do canvas */
+    }
+  </style>
+  <!-- Import Map para usar 'three' via CDN -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Canvas para THREE.js -->
+  <canvas id="c"></canvas>
+  
+  <!-- Embed do modelo 3D do Sketchfab -->
+  <div class="sketchfab-embed-wrapper">
+    <iframe title="3D 8-Bit Super Mario" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/85b7e7c2bbda4603934624443ededd49/embed"></iframe>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
